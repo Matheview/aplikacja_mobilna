@@ -4,13 +4,25 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             NavigationPage.HasNavigationBar="false"
              x:Class="MotoMobile.MainPage">
 
-    <StackLayout>
+    <StackLayout BackgroundColor="#FF242424">
         <!-- Place new controls here -->
-        <Label Text="MotoMobile" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Grid RowSpacing="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="20" />
+            </Grid.ColumnDefinitions>
+            <Image Source="logo.png" Scale="0.7" Grid.Row="1" Grid.Column="1" />
+            <Label Text="U R U C H A M I A N I E . . ." TextColor="#707070" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="End" VerticalTextAlignment="End" TranslationY="20" TranslationX="-80" />
+        </Grid>
     </StackLayout>
 
 </ContentPage>
