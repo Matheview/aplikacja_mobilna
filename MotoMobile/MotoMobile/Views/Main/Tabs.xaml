@@ -8,7 +8,7 @@
              x:Class="MotoMobile.Views.Tabs"
             NavigationPage.HasNavigationBar="False">
   <!--Pages can be added as references or inline-->
-    <pages:CarList/>
-    <pages:CostAnalysis/>
-    <pages:TripCost/>
+    <pages:CarList IconImageSource="home.png" />
+    <pages:CostAnalysis IconImageSource="analyse.png"/>
+    <pages:TripCost IconImageSource="fuel.png"/>
 </TabbedPage>

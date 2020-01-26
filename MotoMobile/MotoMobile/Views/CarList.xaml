@@ -10,8 +10,13 @@
     <StackLayout BackgroundColor="#FF242424">
         <Grid RowSpacing="20" ScaleX="1" AnchorX="22" MinimumHeightRequest="5">
             <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
                 <RowDefinition Height="*" />
-                <RowDefinition Height="60" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
@@ -25,11 +30,10 @@
                 <ColumnDefinition Width="20" />
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="1" Grid.Row="0"></Grid>
-            <Label BackgroundColor="#FF373737" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" TranslationY="-38"></Label>
-            <Image Source="logo.png" Scale="0.8" Grid.Row="0" Grid.Column="2" TranslationY="-28" />
-            <Label Text="Twoje pojazdy" TextColor="#FFFFFFFF" Grid.Row="1" Grid.Column="1" TranslationY="-30" TranslationX="-10"></Label>
-            <ImageButton x:Name="AddCar" Source="button_add_pojazd.png" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"></ImageButton>
-            <Label BackgroundColor="#FF373737" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="5" TranslationY="25"></Label>
+            <Label BackgroundColor="#FF373737" Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="5" ></Label>
+            <Image Source="logo.png" Scale="0.6" Grid.Row="10" Grid.Column="2" TranslationY="5" />
+            <Label Text="Twoje pojazdy" TextColor="#FFFFFFFF" Grid.Row="0" Grid.Column="1" TranslationY="10" TranslationX="-10"></Label>
+            <ImageButton x:Name="AddCar" Source="button_add_pojazd.png" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></ImageButton>
             <Grid Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="5">
                 <Grid Opacity="1">
                     <Grid.RowDefinitions>
@@ -45,13 +49,6 @@
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="20" />
                     </Grid.ColumnDefinitions>
-                    <Button x:Name="HomeCard" Image="home_white.png" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="1" Scale="0.1" TranslationY="30" />
-
-                    <Button x:Name="AnaliseCard" Image="analise_red.png" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="3" Scale="0.1" TranslationY="30" />
-
-                    <Button x:Name="FuelCard" Image="fuel_red.png" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="5" Scale="0.1" TranslationY="30" />
-
-
                 </Grid>
             </Grid>
         </Grid>
