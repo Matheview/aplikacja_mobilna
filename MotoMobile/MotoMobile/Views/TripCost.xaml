@@ -7,7 +7,7 @@
              x:Class="MotoMobile.Views.TripCost"
              Title="Koszt podróży">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor="#FF242424">
             <Grid Margin="20">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
@@ -25,25 +25,38 @@
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
                     
-                    <Label Text="Analiza kosztów podróży" Grid.ColumnSpan="3"/>
-                    
-                    <Label Text="Dystans" Grid.Row="1"/>
-                    <Entry x:Name="Distance" Keyboard="Numeric" Placeholder="0" Grid.Row="1" Grid.Column="1"/>
-                    <Label Text="km" Grid.Row="1" Grid.Column="2"/>
+                    <Label TextColor="#FFFFFFFF" Text="Analiza kosztów podróży" Grid.ColumnSpan="3"/>
+                    <Frame BackgroundColor="#FF373737" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="4" CornerRadius="7">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label TextColor="#979797" Text="Dystans" Grid.Row="0"/>
+                            <Entry TextColor="#FFFFFFFF" x:Name="Distance" Keyboard="Numeric" Placeholder="0" Grid.Row="0" Grid.Column="1"/>
+                            <Label TextColor="#979797" Text="km" Grid.Row="0" Grid.Column="2"/>
 
-                    <Label Text="Cena za litr paliwa" Grid.Row="2"/>
-                    <Entry x:Name="Price" Keyboard="Numeric" Placeholder="0.00" Grid.Row="2" Grid.Column="1"/>
-                    <Label Text="zł" Grid.Row="2" Grid.Column="2"/>
+                            <Label TextColor="#979797" Text="Cena za litr paliwa" Grid.Row="1"/>
+                            <Entry TextColor="#FFFFFFFF" x:Name="Price" Keyboard="Numeric" Placeholder="0.00" Grid.Row="1" Grid.Column="1"/>
+                            <Label TextColor="#979797" Text="zł" Grid.Row="1" Grid.Column="2"/>
 
-                    <Label Text="Średnie zużycie paliwa" Grid.Row="3"/>
-                    <Entry x:Name="FuelUsage" Keyboard="Numeric" Placeholder="0.00" Grid.Row="3" Grid.Column="1"/>
-                    <Label Text="l/100km" Grid.Row="3" Grid.Column="2"/>
-
-                    <Button Text="Przelicz" Clicked="OnCalculateClick" Grid.Row="4" Grid.Column="2"/>
+                            <Label TextColor="#979797" Text="Średnie zużycie paliwa" Grid.Row="2"/>
+                            <Entry TextColor="#FFFFFFFF" x:Name="FuelUsage" Keyboard="Numeric" Placeholder="0.00" Grid.Row="2" Grid.Column="1"/>
+                            <Label TextColor="#979797" Text="l/100km" Grid.Row="2" Grid.Column="2"/>
+                        </Grid>
+                    </Frame>
+                    <ImageButton Source="przelicz_button.png" Clicked="OnCalculateClick" Grid.Row="5" Grid.Column="2" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></ImageButton>
+                    <!--<Button TextColor="#FFFFFFFF" Text="Przelicz" Clicked="OnCalculateClick" Grid.Row="5" Grid.Column="2"/> -->
                 </Grid>
-                <Label x:Name="TotalCost" Text="Wynik" Grid.Row="1"/>
+                <Label TextColor="#FFFFFFFF" x:Name="TotalCost" Text="Wynik" Grid.Row="1"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

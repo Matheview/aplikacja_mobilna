@@ -92,19 +92,19 @@ namespace MotoMobile.Droid
 			global::Xamarin.Essentials.Resource.Drawable.notification_template_icon_low_bg = global::MotoMobile.Droid.Resource.Drawable.notification_template_icon_low_bg;
 			global::Xamarin.Essentials.Resource.Drawable.notification_tile_bg = global::MotoMobile.Droid.Resource.Drawable.notification_tile_bg;
 			global::Xamarin.Essentials.Resource.Drawable.notify_panel_notification_icon_bg = global::MotoMobile.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Xamarin.Essentials.Resource.Id.actions = global::MotoMobile.Droid.Resource.Id.actions;
 			global::Xamarin.Essentials.Resource.Id.action_container = global::MotoMobile.Droid.Resource.Id.action_container;
 			global::Xamarin.Essentials.Resource.Id.action_divider = global::MotoMobile.Droid.Resource.Id.action_divider;
 			global::Xamarin.Essentials.Resource.Id.action_image = global::MotoMobile.Droid.Resource.Id.action_image;
 			global::Xamarin.Essentials.Resource.Id.action_text = global::MotoMobile.Droid.Resource.Id.action_text;
-			global::Xamarin.Essentials.Resource.Id.actions = global::MotoMobile.Droid.Resource.Id.actions;
 			global::Xamarin.Essentials.Resource.Id.all = global::MotoMobile.Droid.Resource.Id.all;
 			global::Xamarin.Essentials.Resource.Id.async = global::MotoMobile.Droid.Resource.Id.async;
 			global::Xamarin.Essentials.Resource.Id.blocking = global::MotoMobile.Droid.Resource.Id.blocking;
 			global::Xamarin.Essentials.Resource.Id.bottom = global::MotoMobile.Droid.Resource.Id.bottom;
 			global::Xamarin.Essentials.Resource.Id.browser_actions_header_text = global::MotoMobile.Droid.Resource.Id.browser_actions_header_text;
+			global::Xamarin.Essentials.Resource.Id.browser_actions_menu_items = global::MotoMobile.Droid.Resource.Id.browser_actions_menu_items;
 			global::Xamarin.Essentials.Resource.Id.browser_actions_menu_item_icon = global::MotoMobile.Droid.Resource.Id.browser_actions_menu_item_icon;
 			global::Xamarin.Essentials.Resource.Id.browser_actions_menu_item_text = global::MotoMobile.Droid.Resource.Id.browser_actions_menu_item_text;
-			global::Xamarin.Essentials.Resource.Id.browser_actions_menu_items = global::MotoMobile.Droid.Resource.Id.browser_actions_menu_items;
 			global::Xamarin.Essentials.Resource.Id.browser_actions_menu_view = global::MotoMobile.Droid.Resource.Id.browser_actions_menu_view;
 			global::Xamarin.Essentials.Resource.Id.center = global::MotoMobile.Droid.Resource.Id.center;
 			global::Xamarin.Essentials.Resource.Id.center_horizontal = global::MotoMobile.Droid.Resource.Id.center_horizontal;
@@ -159,14 +159,12 @@ namespace MotoMobile.Droid
 			global::Xamarin.Essentials.Resource.Style.Widget_Compat_NotificationActionContainer = global::MotoMobile.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
 			global::Xamarin.Essentials.Resource.Style.Widget_Compat_NotificationActionText = global::MotoMobile.Droid.Resource.Style.Widget_Compat_NotificationActionText;
 			global::Xamarin.Essentials.Resource.Style.Widget_Support_CoordinatorLayout = global::MotoMobile.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
-			global::Xamarin.Essentials.Resource.Xml.xamarin_essentials_fileprovider_file_paths = global::MotoMobile.Droid.Resource.Xml.xamarin_essentials_fileprovider_file_paths;
 			global::Xamarin.Essentials.Resource.Styleable.ColorStateListItem = global::MotoMobile.Droid.Resource.Styleable.ColorStateListItem;
 			global::Xamarin.Essentials.Resource.Styleable.ColorStateListItem_alpha = global::MotoMobile.Droid.Resource.Styleable.ColorStateListItem_alpha;
 			global::Xamarin.Essentials.Resource.Styleable.ColorStateListItem_android_alpha = global::MotoMobile.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
 			global::Xamarin.Essentials.Resource.Styleable.ColorStateListItem_android_color = global::MotoMobile.Droid.Resource.Styleable.ColorStateListItem_android_color;
 			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout = global::MotoMobile.Droid.Resource.Styleable.CoordinatorLayout;
 			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_keylines = global::MotoMobile.Droid.Resource.Styleable.CoordinatorLayout_keylines;
-			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::MotoMobile.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
 			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_Layout = global::MotoMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout;
 			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::MotoMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
 			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::MotoMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
@@ -175,13 +173,8 @@ namespace MotoMobile.Droid
 			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::MotoMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
 			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::MotoMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
 			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::MotoMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::MotoMobile.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
 			global::Xamarin.Essentials.Resource.Styleable.FontFamily = global::MotoMobile.Droid.Resource.Styleable.FontFamily;
-			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderAuthority = global::MotoMobile.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
-			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderCerts = global::MotoMobile.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
-			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::MotoMobile.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
-			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::MotoMobile.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
-			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderPackage = global::MotoMobile.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
-			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderQuery = global::MotoMobile.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
 			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont = global::MotoMobile.Droid.Resource.Styleable.FontFamilyFont;
 			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_android_font = global::MotoMobile.Droid.Resource.Styleable.FontFamilyFont_android_font;
 			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_android_fontStyle = global::MotoMobile.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
@@ -193,7 +186,16 @@ namespace MotoMobile.Droid
 			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::MotoMobile.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
 			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_fontWeight = global::MotoMobile.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
 			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_ttcIndex = global::MotoMobile.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderAuthority = global::MotoMobile.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderCerts = global::MotoMobile.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::MotoMobile.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::MotoMobile.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderPackage = global::MotoMobile.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderQuery = global::MotoMobile.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
 			global::Xamarin.Essentials.Resource.Styleable.GradientColor = global::MotoMobile.Droid.Resource.Styleable.GradientColor;
+			global::Xamarin.Essentials.Resource.Styleable.GradientColorItem = global::MotoMobile.Droid.Resource.Styleable.GradientColorItem;
+			global::Xamarin.Essentials.Resource.Styleable.GradientColorItem_android_color = global::MotoMobile.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::Xamarin.Essentials.Resource.Styleable.GradientColorItem_android_offset = global::MotoMobile.Droid.Resource.Styleable.GradientColorItem_android_offset;
 			global::Xamarin.Essentials.Resource.Styleable.GradientColor_android_centerColor = global::MotoMobile.Droid.Resource.Styleable.GradientColor_android_centerColor;
 			global::Xamarin.Essentials.Resource.Styleable.GradientColor_android_centerX = global::MotoMobile.Droid.Resource.Styleable.GradientColor_android_centerX;
 			global::Xamarin.Essentials.Resource.Styleable.GradientColor_android_centerY = global::MotoMobile.Droid.Resource.Styleable.GradientColor_android_centerY;
@@ -206,9 +208,7 @@ namespace MotoMobile.Droid
 			global::Xamarin.Essentials.Resource.Styleable.GradientColor_android_startY = global::MotoMobile.Droid.Resource.Styleable.GradientColor_android_startY;
 			global::Xamarin.Essentials.Resource.Styleable.GradientColor_android_tileMode = global::MotoMobile.Droid.Resource.Styleable.GradientColor_android_tileMode;
 			global::Xamarin.Essentials.Resource.Styleable.GradientColor_android_type = global::MotoMobile.Droid.Resource.Styleable.GradientColor_android_type;
-			global::Xamarin.Essentials.Resource.Styleable.GradientColorItem = global::MotoMobile.Droid.Resource.Styleable.GradientColorItem;
-			global::Xamarin.Essentials.Resource.Styleable.GradientColorItem_android_color = global::MotoMobile.Droid.Resource.Styleable.GradientColorItem_android_color;
-			global::Xamarin.Essentials.Resource.Styleable.GradientColorItem_android_offset = global::MotoMobile.Droid.Resource.Styleable.GradientColorItem_android_offset;
+			global::Xamarin.Essentials.Resource.Xml.xamarin_essentials_fileprovider_file_paths = global::MotoMobile.Droid.Resource.Xml.xamarin_essentials_fileprovider_file_paths;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_fade_in = global::MotoMobile.Droid.Resource.Animation.abc_fade_in;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_fade_out = global::MotoMobile.Droid.Resource.Animation.abc_fade_out;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_grow_fade_in_from_bottom = global::MotoMobile.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -5718,106 +5718,118 @@ namespace MotoMobile.Droid
 			public const int analise_white = 2131165275;
 			
 			// aapt resource value: 0x7F07005C
-			public const int avd_hide_password = 2131165276;
+			public const int analyse = 2131165276;
 			
 			// aapt resource value: 0x7F07005D
-			public const int avd_show_password = 2131165277;
+			public const int avd_hide_password = 2131165277;
 			
 			// aapt resource value: 0x7F07005E
-			public const int button_add_pojazd = 2131165278;
+			public const int avd_show_password = 2131165278;
 			
 			// aapt resource value: 0x7F07005F
-			public const int design_bottom_navigation_item_background = 2131165279;
+			public const int button_add_pojazd = 2131165279;
 			
 			// aapt resource value: 0x7F070060
-			public const int design_fab_background = 2131165280;
+			public const int design_bottom_navigation_item_background = 2131165280;
 			
 			// aapt resource value: 0x7F070061
-			public const int design_ic_visibility = 2131165281;
+			public const int design_fab_background = 2131165281;
 			
 			// aapt resource value: 0x7F070062
-			public const int design_ic_visibility_off = 2131165282;
+			public const int design_ic_visibility = 2131165282;
 			
 			// aapt resource value: 0x7F070063
-			public const int design_password_eye = 2131165283;
+			public const int design_ic_visibility_off = 2131165283;
 			
 			// aapt resource value: 0x7F070064
-			public const int design_snackbar_background = 2131165284;
+			public const int design_password_eye = 2131165284;
 			
 			// aapt resource value: 0x7F070065
-			public const int fuel_red = 2131165285;
+			public const int design_snackbar_background = 2131165285;
 			
 			// aapt resource value: 0x7F070066
-			public const int fuel_white = 2131165286;
+			public const int fuel = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int home_red = 2131165287;
+			public const int fuel_red = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int home_white = 2131165288;
+			public const int fuel_white = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int ic_mtrl_chip_checked_black = 2131165289;
+			public const int home = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int ic_mtrl_chip_checked_circle = 2131165290;
+			public const int home_red = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int ic_mtrl_chip_close_circle = 2131165291;
+			public const int home_white = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int logo = 2131165292;
+			public const int ic_mtrl_chip_checked_black = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int mtrl_snackbar_background = 2131165293;
+			public const int ic_mtrl_chip_checked_circle = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int mtrl_tabs_default_indicator = 2131165294;
+			public const int ic_mtrl_chip_close_circle = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int navigation_empty_icon = 2131165295;
+			public const int logo = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int notification_action_background = 2131165296;
+			public const int mtrl_snackbar_background = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int notification_bg = 2131165297;
+			public const int mtrl_tabs_default_indicator = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int notification_bg_low = 2131165298;
+			public const int navigation_empty_icon = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int notification_bg_low_normal = 2131165299;
+			public const int notification_action_background = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int notification_bg_low_pressed = 2131165300;
+			public const int notification_bg = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int notification_bg_normal = 2131165301;
+			public const int notification_bg_low = 2131165301;
 			
 			// aapt resource value: 0x7F070076
-			public const int notification_bg_normal_pressed = 2131165302;
+			public const int notification_bg_low_normal = 2131165302;
 			
 			// aapt resource value: 0x7F070077
-			public const int notification_icon_background = 2131165303;
+			public const int notification_bg_low_pressed = 2131165303;
 			
 			// aapt resource value: 0x7F070078
-			public const int notification_template_icon_bg = 2131165304;
+			public const int notification_bg_normal = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int notification_template_icon_low_bg = 2131165305;
+			public const int notification_bg_normal_pressed = 2131165305;
 			
 			// aapt resource value: 0x7F07007A
-			public const int notification_tile_bg = 2131165306;
+			public const int notification_icon_background = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int notify_panel_notification_icon_bg = 2131165307;
+			public const int notification_template_icon_bg = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int tooltip_frame_dark = 2131165308;
+			public const int notification_template_icon_low_bg = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int tooltip_frame_light = 2131165309;
+			public const int notification_tile_bg = 2131165309;
+			
+			// aapt resource value: 0x7F07007E
+			public const int notify_panel_notification_icon_bg = 2131165310;
+			
+			// aapt resource value: 0x7F07007F
+			public const int przelicz_button = 2131165311;
+			
+			// aapt resource value: 0x7F070080
+			public const int tooltip_frame_dark = 2131165312;
+			
+			// aapt resource value: 0x7F070081
+			public const int tooltip_frame_light = 2131165313;
 			
 			static Drawable()
 			{
