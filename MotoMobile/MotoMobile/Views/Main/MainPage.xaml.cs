@@ -23,7 +23,7 @@ namespace MotoMobile
         {
             base.OnAppearing();
             await Task.Delay(3000);
-            await Navigation.PushAsync(new CarList());
+            await Navigation.PushAsync(new Tabs());
         }
     }
 }
