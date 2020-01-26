@@ -17,7 +17,6 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -29,9 +28,10 @@
                     </Grid.RowDefinitions>
                     
                     <Label TextColor="#FFFFFFFF" Text="Analiza kosztów podróży" Grid.ColumnSpan="3"/>
-                    <Frame BackgroundColor="#FF373737" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="4" CornerRadius="7">
+                    <Frame BackgroundColor="#FF373737" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="5" CornerRadius="7">
                         <Grid>
                             <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
                                 <RowDefinition Height="*" />
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
@@ -53,11 +53,12 @@
                             <Label TextColor="#979797" Text="l/100km" Grid.Row="2" Grid.Column="2"/>
                         </Grid>
                     </Frame>
-                    <ImageButton Source="przelicz_button.png" Clicked="OnCalculateClick" Grid.Row="5" Grid.Column="2" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></ImageButton>
+                    <ImageButton Source="przelicz_button.png" Clicked="OnCalculateClick" Grid.Row="6" Grid.Column="2" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></ImageButton>
                     <!--<Button TextColor="#FFFFFFFF" Text="Przelicz" Clicked="OnCalculateClick" Grid.Row="5" Grid.Column="2"/> -->
                 </Grid>
                 <Label TextColor="#FFFFFFFF" x:Name="TotalCost" Text="Wynik" Grid.Row="1"/>
             </Grid>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
