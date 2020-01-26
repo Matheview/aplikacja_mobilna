@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="false"
              x:Class="MotoMobile.Views.CarList"
-             Title="Strona główna">
+             Title="Pojazdy">
     <StackLayout BackgroundColor="#FF242424">
         <Grid RowSpacing="20" ScaleX="1" AnchorX="22" MinimumHeightRequest="5">
             <Grid.RowDefinitions>
