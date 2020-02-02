@@ -6,6 +6,10 @@
              mc:Ignorable="d"
              x:Class="MotoMobile.App">
     <Application.Resources>
-
+        <Color x:Key="PageBackgroundColor">#FF242424</Color>
+        <Color x:Key="PageTextColor">#FFFFFFFF</Color>
+        <Color x:Key="EntryPlaceholderColor">#BCBCBC</Color>
+        <Color x:Key="ContainerBackgroundColor">#FF373737</Color>
+        <Color x:Key="ContainerTextColor">#979797</Color>
     </Application.Resources>
 </Application>

@@ -7,8 +7,8 @@
              NavigationPage.HasNavigationBar="false"
              x:Class="MotoMobile.Views.CarList"
              Title="Pojazdy">
-    <StackLayout BackgroundColor="#FF242424">
-        <Grid RowSpacing="20" ScaleX="1" AnchorX="22" MinimumHeightRequest="5">
+    <!--<StackLayout BackgroundColor="#FF242424">
+        --><!--<Grid RowSpacing="20" ScaleX="1" AnchorX="22" MinimumHeightRequest="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="20" />
                 <RowDefinition Height="*" />
@@ -51,7 +51,7 @@
                     </Grid.ColumnDefinitions>
                 </Grid>
             </Grid>
-        </Grid>
+        </Grid>-->
         <!--<ListView ItemsSource="{Binding Cars}"
                   HasUnevenRows="true"
                   ItemTapped="OnListViewItemTapped">
@@ -78,6 +78,41 @@
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView> -->
-    </StackLayout>
+        </ListView> --><!--
+    </StackLayout>-->
+    <ScrollView BackgroundColor="{StaticResource PageBackgroundColor}">
+        <ListView x:Name="VehicleListView"
+                HasUnevenRows="True"
+                ItemTapped="OnListViewItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid BackgroundColor="{StaticResource ContainerBackgroundColor}" Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Make}"
+                                TextColor="{StaticResource PageTextColor}"
+                                FontAttributes="Bold"/>
+                            <Button Text="Edytuj"
+                                TextColor="{StaticResource PageTextColor}" BackgroundColor="{StaticResource PageBackgroundColor}"
+                                Grid.Row="1"/>
+                            <Button Text="Usuń"
+                                TextColor="{StaticResource PageTextColor}" BackgroundColor="{StaticResource PageBackgroundColor}"
+                                Grid.Row="1" Grid.Column="1"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.Footer>
+                <Button Text="Dodaj nowy pojazd"
+                    TextColor="{StaticResource PageTextColor}" BackgroundColor="{StaticResource PageBackgroundColor}"/>
+            </ListView.Footer>
+        </ListView>
+    </ScrollView>
 </ContentPage>

@@ -30,15 +30,15 @@ namespace MotoMobile.Views
                 car2
             };
 
-            BindingContext = this;
+            VehicleListView.ItemsSource = Cars;
         }
 
         async void OnListViewItemTapped(object sender, ItemTappedEventArgs e)
         {
             if (e.Item == null)
                 return;
-
-            await Navigation.PushAsync(new CarPage(Cars[e.ItemIndex]));
+            
+            await DisplayAlert(Cars[e.ItemIndex].Make, Cars[e.ItemIndex].ListModel, "OK");
             ((ListView)sender).SelectedItem = null;
         }
     }
