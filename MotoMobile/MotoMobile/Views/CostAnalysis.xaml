@@ -7,10 +7,10 @@
              x:Class="MotoMobile.Views.CostAnalysis"
              Title="Wydatki">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor="{StaticResource PageBackgroundColor}">
             <Label Text="You spend too much money, sell your wehicle"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand" TextColor="#FFFFFFFF"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

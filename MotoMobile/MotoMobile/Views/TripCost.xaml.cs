@@ -20,13 +20,21 @@ namespace MotoMobile.Views
 
         void OnCalculateClick(object sender, EventArgs args)
         {
-            float distance = float.Parse(Distance.Text, CultureInfo.InvariantCulture);
-            float price = float.Parse(Price.Text, CultureInfo.InvariantCulture);
-            float fuelUsage = float.Parse(FuelUsage.Text, CultureInfo.InvariantCulture);
+            try 
+            { 
+                float distance = float.Parse(Distance.Text, CultureInfo.InvariantCulture);
+                float price = float.Parse(Price.Text, CultureInfo.InvariantCulture);
+                float fuelUsage = float.Parse(FuelUsage.Text, CultureInfo.InvariantCulture);
 
-            float totalCost = (distance / 100) * fuelUsage * price;
+                float totalCost = (distance / 100) * fuelUsage * price;
 
-            TotalCost.Text = totalCost.ToString("0.00") + " zł";
+                TotalCost.Text = totalCost.ToString("0.00") + " zł";
+            }
+            catch (Exception ex)
+            {
+                TotalCost.Text = "0.00 zł";
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

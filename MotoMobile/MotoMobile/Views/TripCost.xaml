@@ -90,7 +90,10 @@
                             </Label>
                         </Grid>
                     </Frame>
-                    <ImageButton Source="przelicz_button.png" Clicked="OnCalculateClick" Grid.Row="6" Grid.Column="2" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></ImageButton>
+                    <Button Text="Przelicz"
+                                Clicked="OnCalculateClick" TextColor="{StaticResource PageTextColor}" BackgroundColor="{StaticResource PageBackgroundColorEdit}"
+                                Grid.Row="6" Grid.Column="2"/>
+                    <!--"<ImageButton Source="przelicz_button.png" Clicked="OnCalculateClick" Grid.Row="6" Grid.Column="2" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></ImageButton>-->
                 </Grid>
                 <Label TextColor="{StaticResource PageTextColor}" x:Name="TotalCost" FontSize="Title" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1"/>
             </Grid>
