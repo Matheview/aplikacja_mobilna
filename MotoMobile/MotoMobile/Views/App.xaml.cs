@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MotoMobile.Controllers;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,6 +10,8 @@ namespace MotoMobile
         public App()
         {
             InitializeComponent();
+
+            DatabaseController.Connect();
 
             MainPage = new NavigationPage(new MainPage());
         }

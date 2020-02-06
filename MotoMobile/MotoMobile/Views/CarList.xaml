@@ -111,8 +111,8 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
             <ListView.Footer>
-                <Button Margin="0,10,0,0" Text="+ dodaj nowy pojazd"
-                    TextColor="{StaticResource PageTextColor}" BackgroundColor="{StaticResource PageBackgroundColorAdd}"/>
+                <Button x:Name="AddNewVehicle" Text="+ dodaj nowy pojazd" Clicked="AddNewVehicle_Clicked"
+                    TextColor="{StaticResource PageTextColor}" BackgroundColor="{StaticResource PageBackgroundColorAdd}" Margin="0,10,0,0"/>
             </ListView.Footer>
         </ListView>
     </ScrollView>

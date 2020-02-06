@@ -1,4 +1,5 @@
-﻿using MotoMobile.Views;
+﻿using MotoMobile.Controllers;
+using MotoMobile.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
