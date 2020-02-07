@@ -14,10 +14,13 @@ namespace MotoMobile.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CostAnalysis : ContentPage
     {
-        private List<Expense> Expenses { get; set; }
+        private List<Expense> Expenses;
+        private ExpenseFilter ExpenseFilter;
 
         public CostAnalysis()
         {
+            ExpenseFilter = new ExpenseFilter();
+
             InitializeComponent();
 
             Expenses = Data.Expenses;
@@ -44,6 +47,11 @@ namespace MotoMobile.Views
 
             await Navigation.PushModalAsync(new EditExpense(ref ExpenseListView, Expenses, Expenses[e.ItemIndex]));
             ((ListView)sender).SelectedItem = null;
+        }
+
+        private async void Filter_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new FilterExpenses(ref ExpenseListView, ref Expenses, ref ExpenseFilter));
         }
     }
 }

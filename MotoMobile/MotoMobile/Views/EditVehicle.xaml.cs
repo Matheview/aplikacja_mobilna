@@ -65,5 +65,10 @@ namespace MotoMobile.Views
 
             await Navigation.PopModalAsync();
         }
+
+        private void Back_Clicked(object sender, EventArgs e)
+        {
+            CloseView();
+        }
     }
 }

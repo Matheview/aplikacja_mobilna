@@ -27,6 +27,8 @@
                     TextColor="{StaticResource PageTextColor}" BackgroundColor="{StaticResource PageBackgroundColorEdit}"/>
             <Button x:Name="Delete" Text="Usuń" Clicked="Delete_Clicked"
                     TextColor="{StaticResource PageTextColor}" BackgroundColor="{StaticResource PageBackgroundColorRemove}"/>
+            <Button x:Name="Back" Text="Wróć" Clicked="Back_Clicked"
+                    TextColor="{StaticResource PageTextColor}" BackgroundColor="{StaticResource PageBackgroundColorRemove}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

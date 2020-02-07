@@ -15,6 +15,8 @@
                     <StackLayout Margin="0, 0, 0, 10">
                         <Label Text="Wydatki:"
                                TextColor="{StaticResource PageTextColor}"/>
+                        <Button x:Name="Filter" Text="Filtruj" Clicked="Filter_Clicked"
+                                TextColor="{StaticResource PageTextColor}" BackgroundColor="{StaticResource PageBackgroundColorEdit}"/>
                         <Button x:Name="AddNewExpense" Text="Dodaj wydatek" Clicked="AddNewExpense_Clicked"
                                 TextColor="{StaticResource PageTextColor}" BackgroundColor="{StaticResource PageBackgroundColorAdd}"/>
                     </StackLayout>

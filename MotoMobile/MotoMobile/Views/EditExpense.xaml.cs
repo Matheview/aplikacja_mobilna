@@ -53,8 +53,17 @@ namespace MotoMobile.Views
         {
             Expense.Title = Title.Text;
             Expense.Amount = Convert.ToInt32(Amount.Text);
-            Expense.Vehicle = Data.Vehicles[VehiclePick.SelectedIndex];
-            Expense.ExpenseType = ExpenseTypePick.SelectedItem as ExpenseType;
+            
+            if(VehiclePick.SelectedItem != null)
+            {
+                Expense.Vehicle = Data.Vehicles[VehiclePick.SelectedIndex];
+            }
+
+            if(ExpenseTypePick.SelectedItem != null)
+            {
+                Expense.ExpenseType = ExpenseTypePick.SelectedItem as ExpenseType;
+            }
+            
             Expense.Date = DatePick.Date;
 
             CloseView();
@@ -74,6 +83,11 @@ namespace MotoMobile.Views
             ExpenseList.ItemsSource = FilteredExpenses;
 
             await Navigation.PopModalAsync();
+        }
+
+        private void Back_Clicked(object sender, EventArgs e)
+        {
+            CloseView();
         }
     }
 }
