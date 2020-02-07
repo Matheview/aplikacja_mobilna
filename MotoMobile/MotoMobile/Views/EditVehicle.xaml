@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MotoMobile.Views.EditVehicle">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{StaticResource PageBackgroundColor}" Padding="10">
+            <Label Text="Marka"
+                 TextColor="{StaticResource PageTextColor}"/>
+            <Entry x:Name="Make"
+                   TextColor="{StaticResource PageTextColor}"/>
+            <Label Text="Model"
+                   TextColor="{StaticResource PageTextColor}"/>
+            <Entry x:Name="Model"
+                   TextColor="{StaticResource PageTextColor}"/>
+            <Label Text="Rok produkcji"
+                   TextColor="{StaticResource PageTextColor}"/>
+            <Entry x:Name="Year" Keyboard="Numeric"
+                   TextColor="{StaticResource PageTextColor}"/>
+            <Label Text="Typ pojazdu"
+                   TextColor="{StaticResource PageTextColor}"/>
+            <Picker x:Name="VehicleTypePick" ItemDisplayBinding="{Binding Description}"
+                    TextColor="{StaticResource PageTextColor}"/>
+            <Button x:Name="Save" Text="Zapisz" Clicked="Save_Clicked"
+                    TextColor="{StaticResource PageTextColor}" BackgroundColor="{StaticResource PageBackgroundColorEdit}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

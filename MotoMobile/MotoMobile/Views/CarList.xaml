@@ -7,79 +7,6 @@
              NavigationPage.HasNavigationBar="false"
              x:Class="MotoMobile.Views.CarList"
              Title="Pojazdy">
-    <!--<StackLayout BackgroundColor="#FF242424">
-        --><!--<Grid RowSpacing="20" ScaleX="1" AnchorX="22" MinimumHeightRequest="5">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="20" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="20" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="20" />
-            </Grid.ColumnDefinitions>
-            <Grid Grid.Column="1" Grid.Row="0"></Grid>
-            <Label BackgroundColor="#FF373737" Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="5" ></Label>
-            <Image Source="logo.png" Scale="0.6" Grid.Row="10" Grid.Column="2" TranslationY="5" />
-            <Label Text="Twoje pojazdy" TextColor="#FFFFFFFF" Grid.Row="0" Grid.Column="1" TranslationY="10" TranslationX="-10"></Label>
-            <ImageButton x:Name="AddCar" Source="button_add_pojazd.png" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></ImageButton>
-            <Grid Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="5">
-                <Grid Opacity="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="20" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="20" />
-                    </Grid.ColumnDefinitions>
-                </Grid>
-            </Grid>
-        </Grid>-->
-        <!--<ListView ItemsSource="{Binding Cars}"
-                  HasUnevenRows="true"
-                  ItemTapped="OnListViewItemTapped">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid Padding="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="*" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <Label Grid.Column="1"
-                           Text="{Binding Make}"
-                           FontAttributes="Bold" />
-                            <Label Grid.Row="1"
-                           Grid.Column="1"
-                           Text="{Binding ListModel}"
-                           VerticalOptions="End" />
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView> --><!--
-    </StackLayout>-->
     <ScrollView BackgroundColor="{StaticResource PageBackgroundColor}">
         <ListView x:Name="VehicleListView"
                 HasUnevenRows="True"
@@ -96,11 +23,19 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Label Text="{Binding Make}"
-                                TextColor="{StaticResource PageTextColor}"
-                                FontAttributes="Bold" />
+                            <StackLayout>
+                                <Label Text="{Binding Make}"
+                                    TextColor="{StaticResource PageTextColor}"
+                                    FontAttributes="Bold" />
+                                <Label Text="{Binding Model}"
+                                    TextColor="{StaticResource PageTextColor}"
+                                    FontAttributes="Bold" />
+                                <Label Text="{Binding Year}"
+                                    TextColor="{StaticResource PageTextColor}"
+                                    FontAttributes="Bold" />
+                            </StackLayout>
                             <Image Source="car.png" Grid.Column="1" Scale="0.7"/>
-                            <Button Text="Edytuj"
+                            <Button x:Name="EditVehicle" Text="Edytuj" Clicked="EditVehicle_Clicked" BindingContext="{Binding}"
                                 TextColor="{StaticResource PageTextColor}" BackgroundColor="{StaticResource PageBackgroundColorEdit}"
                                 Grid.Row="1"/>
                             <Button x:Name="DeleteVehicle" Text="Usuń" Clicked="DeleteVehicle_Clicked" BindingContext="{Binding}"

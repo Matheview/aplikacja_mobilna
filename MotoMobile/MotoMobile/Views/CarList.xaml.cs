@@ -1,15 +1,9 @@
 ﻿using MotoMobile.Models;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
-using System.Threading.Tasks;
-using SQLite;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using System.IO;
 
 namespace MotoMobile.Views
 {
@@ -43,14 +37,23 @@ namespace MotoMobile.Views
 
             Vehicles.Add(newVehicle);
 
-            VehicleListView.ItemsSource = null;
-            VehicleListView.ItemsSource = Vehicles;
+            RefreshList();
         }
 
         private void DeleteVehicle_Clicked(object sender, EventArgs e)
         {
             Vehicles.Remove(((Button)sender).BindingContext as Vehicle);
 
+            RefreshList();
+        }
+
+        private async void EditVehicle_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new EditVehicle(ref VehicleListView, ((Button)sender).BindingContext as Vehicle));
+        }
+
+        public void RefreshList()
+        {
             VehicleListView.ItemsSource = null;
             VehicleListView.ItemsSource = Vehicles;
         }
