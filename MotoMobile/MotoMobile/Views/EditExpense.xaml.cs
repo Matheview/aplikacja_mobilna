@@ -14,7 +14,7 @@ namespace MotoMobile.Views
         private Expense Expense;
         private List<Expense> FilteredExpenses;
 
-        public EditExpense(ref ListView expenseList, List<Expense> filteredExpenses, Expense expense)
+        public EditExpense(ref ListView expenseList, ref List<Expense> filteredExpenses, Expense expense)
         {
             ExpenseList = expenseList;
             Expense = expense;

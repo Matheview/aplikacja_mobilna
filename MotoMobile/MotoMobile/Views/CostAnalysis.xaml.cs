@@ -45,7 +45,7 @@ namespace MotoMobile.Views
             if (e.Item == null)
                 return;
 
-            await Navigation.PushModalAsync(new EditExpense(ref ExpenseListView, Expenses, Expenses[e.ItemIndex]));
+            await Navigation.PushModalAsync(new EditExpense(ref ExpenseListView, ref Expenses, Expenses[e.ItemIndex]));
             ((ListView)sender).SelectedItem = null;
         }
 

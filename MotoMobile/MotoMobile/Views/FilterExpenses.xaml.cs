@@ -126,13 +126,7 @@ namespace MotoMobile.Views
 
         private void Clear_Clicked(object sender, EventArgs e)
         {
-            ExpenseFilter.Title = "";
-            ExpenseFilter.AmountFrom = null;
-            ExpenseFilter.AmountTo = null;
-            ExpenseFilter.Vehicle = null;
-            ExpenseFilter.ExpenseType = null;
-            ExpenseFilter.DateFrom = DatePickFrom.MinimumDate;
-            ExpenseFilter.DateTo = DatePickTo.MaximumDate;
+            ExpenseFilter = new ExpenseFilter();
 
             Title.Text = "";
             AmountFrom.Text = "";
