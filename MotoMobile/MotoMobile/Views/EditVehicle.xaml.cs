@@ -23,8 +23,8 @@ namespace MotoMobile.Views
 
             InitializeComponent();
 
-            LoadValues();
             VehicleTypePick.ItemsSource = Types.VehicleTypes;
+            LoadValues();
         }
 
         private void LoadValues()
@@ -32,7 +32,11 @@ namespace MotoMobile.Views
             Make.Text = Vehicle.Make;
             Model.Text = Vehicle.Model;
             Year.Text = Vehicle.Year.ToString();
-            VehicleTypePick.SelectedItem = Vehicle.VehicleType;
+            
+            if(Vehicle.VehicleType != null)
+            {
+                VehicleTypePick.SelectedIndex = Vehicle.VehicleType.ID;
+            }
         }
 
         private async void Save_Clicked(object sender, EventArgs e)

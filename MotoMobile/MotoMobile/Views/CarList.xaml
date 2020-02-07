@@ -34,7 +34,7 @@
                                     TextColor="{StaticResource PageTextColor}"
                                     FontAttributes="Bold" />
                             </StackLayout>
-                            <Image Source="car.png" Grid.Column="1" Scale="0.7"/>
+                            <Image Source="{Binding VehicleType.ImageSource}" Grid.Column="1" Scale="0.7"/>
                             <Button x:Name="EditVehicle" Text="Edytuj" Clicked="EditVehicle_Clicked" BindingContext="{Binding}"
                                 TextColor="{StaticResource PageTextColor}" BackgroundColor="{StaticResource PageBackgroundColorEdit}"
                                 Grid.Row="1"/>

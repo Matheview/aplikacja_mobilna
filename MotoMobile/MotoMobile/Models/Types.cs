@@ -6,18 +6,18 @@ namespace MotoMobile.Models
     {
         public static List<VehicleType> VehicleTypes = new List<VehicleType>()
         {
-            new VehicleType() { Description = "Motocykl" },
-            new VehicleType() { Description = "Samochód osobowy" },
-            new VehicleType() { Description = "Samochód dostawczy" },
+            new VehicleType() { ID = 0, Description = "Motocykl", ImageSource = "moto.png" },
+            new VehicleType() { ID = 1, Description = "Samochód osobowy", ImageSource = "car.png" },
+            new VehicleType() { ID = 2, Description = "Samochód dostawczy", ImageSource = "truck.png" },
         };
 
         public static List<ExpenseType> ExpenseTypes = new List<ExpenseType>()
         {
-            new ExpenseType() { Description = "Paliwo" },
-            new ExpenseType() { Description = "Części" },
-            new ExpenseType() { Description = "Mechanik" },
-            new ExpenseType() { Description = "Ubezpieczenie" },
-            new ExpenseType() { Description = "Inne" },
+            new ExpenseType() { ID = 0, Description = "Paliwo" },
+            new ExpenseType() { ID = 1, Description = "Części" },
+            new ExpenseType() { ID = 2, Description = "Mechanik" },
+            new ExpenseType() { ID = 3, Description = "Ubezpieczenie" },
+            new ExpenseType() { ID = 4, Description = "Inne" },
         };
     }
 }
