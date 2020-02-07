@@ -7,10 +7,69 @@
              x:Class="MotoMobile.Views.CostAnalysis"
              Title="Wydatki">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="{StaticResource PageBackgroundColor}">
-            <Label Text="You spend too much money, sell your wehicle"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" TextColor="#FFFFFFFF"/>
-        </StackLayout>
+        <ScrollView BackgroundColor="{StaticResource PageBackgroundColor}" Padding="10">
+            <ListView x:Name="ExpenseListView"
+                    HasUnevenRows="True"
+                      ItemTapped="ExpenseListView_ItemTapped">
+                <ListView.Header>
+                    <StackLayout Margin="0, 0, 0, 10">
+                        <Label Text="Wydatki:"
+                               TextColor="{StaticResource PageTextColor}"/>
+                        <Button x:Name="AddNewExpense" Text="Dodaj wydatek" Clicked="AddNewExpense_Clicked"
+                                TextColor="{StaticResource PageTextColor}" BackgroundColor="{StaticResource PageBackgroundColorAdd}"/>
+                    </StackLayout>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid BackgroundColor="{StaticResource ContainerBackgroundColor}" Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding Title}"
+                                    TextColor="{StaticResource PageTextColor}"
+                                    FontAttributes="Bold"
+                                       Grid.RowSpan="2"/>
+                                <Label Text="{Binding ExpenseType.Description}"
+                                    TextColor="{StaticResource ContainerTextColor}"
+                                    FontAttributes="Bold"
+                                       Grid.Row="2"/>
+                                
+                                <Label Text="{Binding Amount}" HorizontalTextAlignment="End"
+                                    TextColor="{StaticResource PageTextColor}"
+                                    FontAttributes="Bold"
+                                       Grid.Column="1"/>
+                                <Label Text="zł"
+                                    TextColor="{StaticResource PageTextColor}"
+                                    FontAttributes="Bold"
+                                       Grid.Column="2"/>
+
+                                <Label Text="{Binding Vehicle.Make}" HorizontalTextAlignment="End"
+                                    TextColor="{StaticResource PageTextColor}"
+                                    FontAttributes="Bold"
+                                       Grid.Column="1" Grid.Row="1"/>
+                                <Label Text="{Binding Vehicle.Model}"
+                                    TextColor="{StaticResource PageTextColor}"
+                                    FontAttributes="Bold"
+                                       Grid.Column="2" Grid.Row="1"/>
+
+                                <Label Text="{Binding Date}" HorizontalTextAlignment="Center"
+                                    TextColor="{StaticResource ContainerTextColor}"
+                                    FontAttributes="Bold"
+                                       Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

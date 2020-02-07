@@ -1,9 +1,6 @@
-﻿using MotoMobile.Models;
+﻿using MotoMobile.Database;
+using MotoMobile.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -13,7 +10,7 @@ namespace MotoMobile.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EditVehicle : ContentPage
     {
-        ListView VehicleList;
+        private ListView VehicleList;
         private Vehicle Vehicle;
 
         public EditVehicle(ref ListView vehicleList, Vehicle vehicle)
@@ -23,15 +20,20 @@ namespace MotoMobile.Views
 
             InitializeComponent();
 
-            VehicleTypePick.ItemsSource = Types.VehicleTypes;
             LoadValues();
         }
 
         private void LoadValues()
         {
+            VehicleTypePick.ItemsSource = Data.VehicleTypes;
+
             Make.Text = Vehicle.Make;
             Model.Text = Vehicle.Model;
-            Year.Text = Vehicle.Year.ToString();
+            
+            if(Vehicle.Year > 0)
+            {
+                Year.Text = Vehicle.Year.ToString();
+            }
             
             if(Vehicle.VehicleType != null)
             {
@@ -39,16 +41,27 @@ namespace MotoMobile.Views
             }
         }
 
-        private async void Save_Clicked(object sender, EventArgs e)
+        private void Save_Clicked(object sender, EventArgs e)
         {
             Vehicle.Make = Make.Text;
             Vehicle.Model = Model.Text;
             Vehicle.Year = Convert.ToInt32(Year.Text);
             Vehicle.VehicleType = VehicleTypePick.SelectedItem as VehicleType;
 
-            var vehicles = VehicleList.ItemsSource;
+            CloseView();
+        }
+
+        private void Delete_Clicked(object sender, EventArgs e)
+        {
+            Data.Vehicles.Remove(Vehicle);
+
+            CloseView();
+        }
+
+        private async void CloseView()
+        {
             VehicleList.ItemsSource = null;
-            VehicleList.ItemsSource = vehicles;
+            VehicleList.ItemsSource = Data.Vehicles;
 
             await Navigation.PopModalAsync();
         }

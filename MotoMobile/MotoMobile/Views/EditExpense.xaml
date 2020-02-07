@@ -4,24 +4,28 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="MotoMobile.Views.EditVehicle">
+             x:Class="MotoMobile.Views.EditExpense">
     <ContentPage.Content>
         <StackLayout BackgroundColor="{StaticResource PageBackgroundColor}" Padding="10">
-            <Label Text="Marka"
+            <Label Text="Tytuł"
                  TextColor="{StaticResource PageTextColor}"/>
-            <Entry x:Name="Make"
+            <Entry x:Name="Title"
                    TextColor="{StaticResource PageTextColor}"/>
-            <Label Text="Model"
+            <Label Text="Kwota"
                    TextColor="{StaticResource PageTextColor}"/>
-            <Entry x:Name="Model"
+            <Entry x:Name="Amount" Keyboard="Numeric"
                    TextColor="{StaticResource PageTextColor}"/>
-            <Label Text="Rok produkcji"
+            <Label Text="Pojazd"
                    TextColor="{StaticResource PageTextColor}"/>
-            <Entry x:Name="Year" Keyboard="Numeric"
+            <Picker x:Name="VehiclePick" ItemDisplayBinding="{Binding Name}"
+                    TextColor="{StaticResource PageTextColor}"/>
+            <Label Text="Typ wydatku"
                    TextColor="{StaticResource PageTextColor}"/>
-            <Label Text="Typ pojazdu"
+            <Picker x:Name="ExpenseTypePick" ItemDisplayBinding="{Binding Description}"
+                    TextColor="{StaticResource PageTextColor}"/>
+            <Label Text="Data"
                    TextColor="{StaticResource PageTextColor}"/>
-            <Picker x:Name="VehicleTypePick" ItemDisplayBinding="{Binding Description}"
+            <DatePicker x:Name="DatePick"
                     TextColor="{StaticResource PageTextColor}"/>
             <Button x:Name="Save" Text="Zapisz" Clicked="Save_Clicked"
                     TextColor="{StaticResource PageTextColor}" BackgroundColor="{StaticResource PageBackgroundColorEdit}"/>

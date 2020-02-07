@@ -7,7 +7,7 @@
              NavigationPage.HasNavigationBar="false"
              x:Class="MotoMobile.Views.CarList"
              Title="Pojazdy">
-    <ScrollView BackgroundColor="{StaticResource PageBackgroundColor}">
+    <ScrollView BackgroundColor="{StaticResource PageBackgroundColor}" Padding="10">
         <ListView x:Name="VehicleListView"
                 HasUnevenRows="True"
                 ItemTapped="OnListViewItemTapped">
@@ -15,10 +15,6 @@
                 <DataTemplate>
                     <ViewCell>
                         <Grid BackgroundColor="{StaticResource ContainerBackgroundColor}" Padding="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
@@ -35,12 +31,6 @@
                                     FontAttributes="Bold" />
                             </StackLayout>
                             <Image Source="{Binding VehicleType.ImageSource}" Grid.Column="1" Scale="0.7"/>
-                            <Button x:Name="EditVehicle" Text="Edytuj" Clicked="EditVehicle_Clicked" BindingContext="{Binding}"
-                                TextColor="{StaticResource PageTextColor}" BackgroundColor="{StaticResource PageBackgroundColorEdit}"
-                                Grid.Row="1"/>
-                            <Button x:Name="DeleteVehicle" Text="Usuń" Clicked="DeleteVehicle_Clicked" BindingContext="{Binding}"
-                                TextColor="{StaticResource PageTextColor}" BackgroundColor="{StaticResource PageBackgroundColorRemove}"
-                                Grid.Row="1" Grid.Column="1"/>
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
