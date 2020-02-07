@@ -31,6 +31,9 @@ namespace MotoMobile.Views
 
         private void LoadValues()
         {
+            ExpenseTypePick.ItemsSource = Data.ExpenseTypes;
+            VehiclePick.ItemsSource = Data.Vehicles.ConvertAll(x => { return new VehicleUI(x); });
+
             Title.Text = ExpenseFilter.Title;
             AmountFrom.Text = ExpenseFilter.AmountFrom.ToString();
             AmountTo.Text = ExpenseFilter.AmountTo.ToString();
@@ -58,11 +61,11 @@ namespace MotoMobile.Views
         {
             FilteredExpenses = Data.Expenses;
 
-            if(Title.Text != null)
+            if(!Title.Text.Equals(""))
             {
                 ExpenseFilter.Title = Title.Text;
 
-                FilteredExpenses = FilteredExpenses.FindAll(x => x.Title.Contains(ExpenseFilter.Title));
+                FilteredExpenses = FilteredExpenses.FindAll(x => x.Title.ToLower().Contains(ExpenseFilter.Title.ToLower()));
             }
 
             if(!AmountFrom.Text.Equals(""))
@@ -123,7 +126,7 @@ namespace MotoMobile.Views
 
         private void Clear_Clicked(object sender, EventArgs e)
         {
-            ExpenseFilter.Title = null;
+            ExpenseFilter.Title = "";
             ExpenseFilter.AmountFrom = null;
             ExpenseFilter.AmountTo = null;
             ExpenseFilter.Vehicle = null;
@@ -131,7 +134,7 @@ namespace MotoMobile.Views
             ExpenseFilter.DateFrom = DatePickFrom.MinimumDate;
             ExpenseFilter.DateTo = DatePickTo.MaximumDate;
 
-            Title.Text = null;
+            Title.Text = "";
             AmountFrom.Text = "";
             AmountTo.Text = "";
             VehiclePick.SelectedItem = null;

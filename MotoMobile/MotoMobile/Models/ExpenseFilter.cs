@@ -22,6 +22,7 @@ namespace MotoMobile.Models
 
         public ExpenseFilter()
         {
+            Title = "";
             DateFrom = DateTime.MinValue;
             DateTo = DateTime.MaxValue;
         }
